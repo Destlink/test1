@@ -15,7 +15,8 @@ pipeline {
                 sh '''
                     echo 'on develop'
                 '''
-                test1()
+                def test1 = library(identifier: 'test1')
+                test1.call()
             }
         }
     }
