@@ -15,6 +15,7 @@ pipeline {
                 sh '''
                     echo 'on develop'
                 '''
+                test1()
             }
         }
     }
