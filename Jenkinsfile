@@ -7,6 +7,16 @@ pipeline {
                 echo 'Hello World'
             }
         }
+        stage('merge') {
+            with {
+                branch: 'develop'
+            }
+            steps {
+                sh '''
+                    echo 'on develop'
+                '''
+            }
+        }
     }
 }
 
