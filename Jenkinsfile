@@ -1,7 +1,3 @@
-void test1() {
-    sh script:'echo groovy'
-}
-
 pipeline {
     agent any
 
@@ -19,7 +15,9 @@ pipeline {
                 sh '''
                     echo 'on develop'
                 '''
-                test1()
+                def rootDir = pwd() + "/vars/"
+                def testModule = load "${rootDir}@script/test1.groovy"
+                testModule.call()
             }
         }
     }
