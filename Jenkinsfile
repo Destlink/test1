@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('merge') {
-            with {
+            when {
                 branch: 'develop'
             }
             steps {
