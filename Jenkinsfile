@@ -17,7 +17,7 @@ pipeline {
                 '''
                 script {
                     String rootDir = pwd()
-                    Object testModule = load "${rootDir}vars/test1.groovy"
+                    Object testModule = load "${rootDir}/vars/test1.groovy"
                     testModule.call()
                 }
             }
