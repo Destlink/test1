@@ -1,3 +1,7 @@
+void test1() {
+    sh script:'echo groovy'
+}
+
 pipeline {
     agent any
 
@@ -15,8 +19,7 @@ pipeline {
                 sh '''
                     echo 'on develop'
                 '''
-                def test1 = library(identifier: 'test1')
-                test1.call()
+                test1()
             }
         }
     }
