@@ -16,8 +16,8 @@ pipeline {
                     echo 'on develop'
                 '''
                 script {
-                    String rootDir = pwd() + '/vars/'
-                    Object testModule = load "${rootDir}@script/test1.groovy"
+                    String rootDir = pwd()
+                    Object testModule = load "${rootDir}vars/test1.groovy"
                     testModule.call()
                 }
             }
