@@ -9,7 +9,7 @@ pipeline {
         }
         stage('merge') {
             when {
-                branch: 'develop'
+                branch "develop"
             }
             steps {
                 sh '''
